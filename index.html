@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    
+    <header class="text-center py-5">
+        <h1>關  正  廷</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg   fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">何倫碼測驗結果</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">MIT相關工作</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">自傳履歷</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+            <br>
+            <br>
+            <div class="row">
+    
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('HollandTest.html')">
+                        
+                        <div class="card-body">                          
+                            <h2 class="card-title">何倫碼測驗結果</h2>
+                            <br>
+                            <div class="title-box-1">
+                                <h5 class="card-body">研究型（Investigative）</h5>
+                            </div>
+                            <p class="card-text">
+                                觀察、分析、邏輯<br>
+                                你喜歡依據理論與資訊行動<br>
+                                ，樂於追根究底解決問題
+                            </p>
+                            <br>
+                            <div class="title-box-2">
+                                <h5 class="card-body">藝術型（Artistic）</h5>
+                            </div>                           
+                            <p class="card-text">
+                                創作、感性、想像<br>
+                                你不循規蹈矩、獨立自主、<br>
+                                富有創意，對事物有敏銳的感受力
+                            </p>
+                            <br>
+                            <div class="title-box-3">
+                                <h5 class="card-body">實用型（Realistic）</h5>
+                            </div> 
+                            <p class="card-text">
+                                行動、耐性、技術<br>
+                                你偏好倚靠雙手實作，從事務實、需要操作機械的工作
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+    
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('about.html')">
+                        <div class="card-body">
+                            <h2 class="card-title">MIT相關工作</h2>
+                            <br>
+                            <div class="title-box-4">
+                                <h5 class="card-body">軟體專案主管</h5>
+                            </div>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">擔任軟體工程的規劃、主導、協調專案的管理者</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">擬定專案範疇符合成本、品質、規格，並將工作分配給專案成員</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">了解、擬定客戶或公司需求並提出軟體開發或研發規劃符合其需求</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">協助軟體設計及問題檢討分析</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">管理、協調與驗收軟體相關之專案</li>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('Resume.html')">
+                        <div class="card-body">
+                            <h2 class="card-title">自傳履歷</h2>
+                            <br>
+                            <div class="title-box-5">
+                                <h5 class="card-body">自我介紹</h5>
+                            </div>
+                            <br>
+                            <li class="card-text">在這裡列舉你的技能和專業領域。</li>
+                            <br>
+                            <div class="title-box-6">
+                                <h5 class="card-body">生涯規劃</h5>
+                            </div>
+                            <br>
+                            <li class="card-text">在這裡列舉你的技能和專業領域。</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+    <!-- 引入 Bootstrap 及 Popper.js JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 當點擊 Navbar 中的連結時，進行平滑滾動
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+   
+        function redirectToLink(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
