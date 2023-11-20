@@ -1,0 +1,87 @@
+body{
+    background-color: #F7EFE5;
+}
+nav{
+    background-color: #C3ACD0;
+    color: #7743DB;
+}
+header{
+    background-color: #C3ACD0;
+
+}
+.custom-card {
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 15px;
+    background-color:#FFFBF5;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    
+}
+.card-body{
+    position: relative;
+}
+.custom-card:hover {
+    transform: scale(1.05);
+    
+}
+h1{
+    color: #7743DB;
+    font-weight:bolder;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+h5{
+    text-align: center;
+}
+.custom-card .card-text{
+    margin: 0 auto;
+    width: 75%;
+    height: 75%;
+    text-align: center;
+}
+.custom-card .card-text-2{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.title-box-1{
+    border-radius: 10px;
+    background-color: rgb(169, 179, 118);
+    box-sizing: border-box;
+}
+.title-box-2{
+    border-radius: 10px;
+    background-color: rgb(217, 101, 103);
+    box-sizing: border-box;
+}
+.title-box-3{
+    border-radius: 10px;
+    background-color: rgb(140, 191, 202);
+    box-sizing: border-box;
+}
+.title-box-4{
+    border-radius: 10px;
+    background-color: rgb(226, 175, 75);
+    box-sizing: border-box;
+}
+.title-box-5{
+    border-radius: 10px;
+    background-color: rgb(226, 153, 99);
+    box-sizing: border-box;
+}
+.title-box-6{
+    border-radius: 10px;
+    background-color: rgb(167, 122, 168);
+    box-sizing: border-box;
+}
+.nav-link{
+    color: #7743DB;
+}
